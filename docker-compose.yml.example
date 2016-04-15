@@ -1,0 +1,12 @@
+version: "2"
+services:
+  gcloud:
+      build: .
+      image: apsl/gcloud
+      command: --help
+      environment:
+          GCLOUD_EMAIL_SERVICE_ACCOUNT: email@project-name.iam.gserviceaccount.com
+          GCLOUD_KEY_FILE: file-alkjsalkdj.json
+          GCLOUD_PROJECT: project-name
+      volumes:
+          - ./keys:/keys
